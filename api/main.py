@@ -9,7 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
 # Load the pre-trained model
-model = joblib.load("random_forest_model.pkl")
+model = joblib.load("api/random_forest_model.pkl")
 
 # Define the FastAPI app
 app = FastAPI()
