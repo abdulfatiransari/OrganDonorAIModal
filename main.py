@@ -9,7 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
 # Load the pre-trained model
-model = joblib.load("api/random_forest_model.pkl")
+model = joblib.load("random_forest_model.pkl")
 
 # Define the FastAPI app
 app = FastAPI()
@@ -22,6 +22,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+@app.post("/")
+async def home():
+    return {"message": "Welcome to the CKD Prediction API!"}
 # Define the input schema using Pydantic
 class PatientData(BaseModel):
     age: int
