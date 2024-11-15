@@ -1,12 +1,10 @@
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-import joblib
-import numpy as np
-import pandas as pd
-from fastapi.responses import JSONResponse
-from fastapi.middleware.cors import CORSMiddleware
-
-app = FastAPI()
+from fastapi import FastAPI, HTTPException # type: ignore
+from pydantic import BaseModel # type: ignore
+import joblib # type: ignore
+import numpy as np # type: ignore
+import pandas as pd # type: ignore
+from fastapi.responses import JSONResponse # type: ignore
+from fastapi.middleware.cors import CORSMiddleware # type: ignore
 
 # Load the pre-trained model
 model = joblib.load("random_forest_model.pkl")
